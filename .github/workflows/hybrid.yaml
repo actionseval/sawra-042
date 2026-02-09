@@ -1,0 +1,92 @@
+name: CI Workflow
+
+# on: [push, pull_request]
+on: [repository_dispatch, workflow_dispatch]
+
+jobs:
+  linting:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+        python-version:
+          - '3.8'
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Dependencies
+        run: pip install black==24.8.0 importlib_metadata==8.5.0 opt_einsum==3.4.0 pyasn1_modules==0.4.2 pylint==2.15.10 uv==0.9.26
+      - run: |
+          python -m pip install --upgrade pip
+          pip install pylint==2.15.10
+          pip install black
+      - run: |
+          pip install .
+      - run: |
+          pylint --fail-under=10 deepface/
+
+  type-check:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+        python-version:
+          - '3.8'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Dependencies
+        run: pip install black==24.8.0 importlib_metadata==8.5.0 opt_einsum==3.4.0 pyasn1_modules==0.4.2 pylint==2.15.10 uv==0.9.26
+      - run: |
+          python -m pip install --upgrade pip
+      - run: |
+          pip install mypy==1.14.1
+          pip install .
+      - run: |
+          mypy deepface/
+    env:
+      PLAT: linux-x86_64
+
+  unit-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+        python-version:
+          - '3.8'
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Dependencies
+        run: |
+          python3.8-distutils
+          pip install black==24.8.0 mypy==1.14.1
+      - run: |
+          python -m pip install --upgrade pip
+      - run: |
+          pip install pytest
+      - run: |
+          pip install Werkzeug==2.0.2 flask==2.0.2
+      - run: |
+          pip install .
+          cd tests/unit
+      - run: |
+          python -m pytest . -s --disable-warnings
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    env:
+      DEEPFACE_AUTH_TOKEN: some_token
+      DEEPFACE_CONNECTION_DETAILS: some_connection_string
+    timeout-minutes: 175
