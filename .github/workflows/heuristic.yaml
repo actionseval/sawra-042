@@ -122,31 +122,31 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
-    env:
-      ACCEPT_EULA: Y
-      BOOTSTRAP_HASKELL_NONINTERACTIVE: '1'
-      DEBIAN_FRONTEND: noninteractive
-      DEEPFACE_AUTH_TOKEN: some_token
-      DEEPFACE_CONNECTION_DETAILS: some_connection_string
-      DOTNET_MULTILEVEL_LOOKUP: '0'
-      DOTNET_NOLOGO: '1'
-      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: '1'
-      HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: '3650'
-      HOMEBREW_NO_AUTO_UPDATE: '1'
-      HOSTNAME: pop-os
-      ImageOS: ubuntu24
-      ImageVersion: 20260111.209.1
-      LC_CTYPE: C.UTF-8
-      PLAT: linux-x86_64
-      POWERSHELL_DISTRIBUTION_CHANNEL: GitHub-Actions-ubuntu24
-      PYTEST_VERSION: 8.3.5
-      SHLVL: '1'
-      TERM: xterm
-      TF2_BEHAVIOR: '1'
-      TF_CPP_MIN_LOG_LEVEL: '3'
-      TF_FORCE_GPU_ALLOW_GROWTH: 'true'
-      TF_USE_LEGACY_KERAS: '1'
-      TPU_ML_PLATFORM: Tensorflow
-      _PYI_LINUX_PROCESS_NAME: sawra
-      _PYI_PARENT_PROCESS_LEVEL: '1'
+    # env:
+    #   ACCEPT_EULA: Y
+    #   BOOTSTRAP_HASKELL_NONINTERACTIVE: '1'
+    #   DEBIAN_FRONTEND: noninteractive
+    #   DEEPFACE_AUTH_TOKEN: some_token
+    #   DEEPFACE_CONNECTION_DETAILS: some_connection_string
+    #   DOTNET_MULTILEVEL_LOOKUP: '0'
+    #   DOTNET_NOLOGO: '1'
+    #   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: '1'
+    #   HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS: '3650'
+    #   HOMEBREW_NO_AUTO_UPDATE: '1'
+    #   HOSTNAME: pop-os
+    #   ImageOS: ubuntu24
+    #   ImageVersion: 20260111.209.1
+    #   LC_CTYPE: C.UTF-8
+    #   PLAT: linux-x86_64
+    #   POWERSHELL_DISTRIBUTION_CHANNEL: GitHub-Actions-ubuntu24
+    #   PYTEST_VERSION: 8.3.5
+    #   SHLVL: '1'
+    #   TERM: xterm
+    #   TF2_BEHAVIOR: '1'
+    #   TF_CPP_MIN_LOG_LEVEL: '3'
+    #   TF_FORCE_GPU_ALLOW_GROWTH: 'true'
+    #   TF_USE_LEGACY_KERAS: '1'
+    #   TPU_ML_PLATFORM: Tensorflow
+    #   _PYI_LINUX_PROCESS_NAME: sawra
+    #   _PYI_PARENT_PROCESS_LEVEL: '1'
     timeout-minutes: 175.22530584732692
