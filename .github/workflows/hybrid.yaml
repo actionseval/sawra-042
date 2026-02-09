@@ -70,7 +70,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install Dependencies
         run: |
-          python3.8-distutils
+          # python3.8-distutils
           pip install black==24.8.0 mypy==1.14.1
       - run: |
           python -m pip install --upgrade pip
