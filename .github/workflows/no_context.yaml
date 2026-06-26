@@ -20,8 +20,8 @@ jobs:
       - name: Install system packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            adduser base-files bash bash-completion binutils-common:amd64 command-not-found coreutils cron-daemon-common debconf dhcpcd-base e2fsprogs fuse3 hdparm keyutils libattr1:amd64 libaudit-common libc-bin libc6:amd64 libmagic1t64:amd64 libmecab2:amd64 libpam-runtime libpython3.8-minimal:amd64 libpython3.8-stdlib:amd64 libsensors-config libtirpc-common locales login logrotate lsb-release ltrace man-db media-types multipath-tools nano netbase nftables openssl overlayroot procps python3.8-distutils python3.8-minimal rsyslog screen sudo tar tzdata ucf usb-modeswitch util-linux walinuxagent wget
+          # sudo apt-get install -y \
+          #   adduser base-files bash bash-completion binutils-common:amd64 command-not-found coreutils cron-daemon-common debconf dhcpcd-base e2fsprogs fuse3 hdparm keyutils libattr1:amd64 libaudit-common libc-bin libc6:amd64 libmagic1t64:amd64 libmecab2:amd64 libpam-runtime libpython3.8-minimal:amd64 libpython3.8-stdlib:amd64 libsensors-config libtirpc-common locales login logrotate lsb-release ltrace man-db media-types multipath-tools nano netbase nftables openssl overlayroot procps python3.8-distutils python3.8-minimal rsyslog screen sudo tar tzdata ucf usb-modeswitch util-linux walinuxagent wget
 
       - name: Install Python dependencies
         run: |
@@ -47,8 +47,8 @@ jobs:
       - name: Install system packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            adduser base-files bash bash-completion binutils-common:amd64 command-not-found coreutils cron-daemon-common debconf dhcpcd-base e2fsprogs fuse3 hdparm keyutils libattr1:amd64 libaudit-common libc-bin libc6:amd64 libmagic1t64:amd64 libmecab2:amd64 libncursesw6:amd64 libpam-runtime libpython3.8-minimal:amd64 libpython3.8-stdlib:amd64 libsensors-config libtirpc-common locales login logrotate lsb-release ltrace man-db media-types multipath-tools nano netbase nftables openssl overlayroot procps python3.8-distutils python3.8-minimal rsyslog screen sudo tar tzdata ucf usb-modeswitch util-linux walinuxagent wget
+          # sudo apt-get install -y \
+          #   adduser base-files bash bash-completion binutils-common:amd64 command-not-found coreutils cron-daemon-common debconf dhcpcd-base e2fsprogs fuse3 hdparm keyutils libattr1:amd64 libaudit-common libc-bin libc6:amd64 libmagic1t64:amd64 libmecab2:amd64 libncursesw6:amd64 libpam-runtime libpython3.8-minimal:amd64 libpython3.8-stdlib:amd64 libsensors-config libtirpc-common locales login logrotate lsb-release ltrace man-db media-types multipath-tools nano netbase nftables openssl overlayroot procps python3.8-distutils python3.8-minimal rsyslog screen sudo tar tzdata ucf usb-modeswitch util-linux walinuxagent wget
 
       - name: Install Python dependencies
         run: |
@@ -73,8 +73,8 @@ jobs:
       - name: Install system packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            adduser base-files bash bash-completion binutils-common:amd64 command-not-found coreutils cron-daemon-common debconf dhcpcd-base e2fsprogs fuse3 hdparm keyutils libacl1:amd64 libattr1:amd64 libaudit-common libbsd0:amd64 libc-bin libc6:amd64 libgl1:amd64 libglib2.0-0t64:amd64 libglvnd0:amd64 libglx0:amd64 libmagic1t64:amd64 libmd0:amd64 libmecab2:amd64 libpam-runtime libpcre2-8-0:amd64 libpython3.8-minimal:amd64 libpython3.8-stdlib:amd64 libselinux1:amd64 libsensors-config libtirpc-common libx11-6:amd64 libxau6:amd64 libxcb1:amd64 libxdmcp6:amd64 locales login logrotate lsb-release ltrace man-db media-types multipath-tools nano ncurses-base netbase nftables openssl overlayroot procps python3.8-distutils python3.8-minimal rsyslog screen sudo tar tzdata ucf usb-modeswitch util-linux walinuxagent wget
+          # sudo apt-get install -y \
+          #   adduser base-files bash bash-completion binutils-common:amd64 command-not-found coreutils cron-daemon-common debconf dhcpcd-base e2fsprogs fuse3 hdparm keyutils libacl1:amd64 libattr1:amd64 libaudit-common libbsd0:amd64 libc-bin libc6:amd64 libgl1:amd64 libglib2.0-0t64:amd64 libglvnd0:amd64 libglx0:amd64 libmagic1t64:amd64 libmd0:amd64 libmecab2:amd64 libpam-runtime libpcre2-8-0:amd64 libpython3.8-minimal:amd64 libpython3.8-stdlib:amd64 libselinux1:amd64 libsensors-config libtirpc-common libx11-6:amd64 libxau6:amd64 libxcb1:amd64 libxdmcp6:amd64 locales login logrotate lsb-release ltrace man-db media-types multipath-tools nano ncurses-base netbase nftables openssl overlayroot procps python3.8-distutils python3.8-minimal rsyslog screen sudo tar tzdata ucf usb-modeswitch util-linux walinuxagent wget
 
       - name: Install Python dependencies
         run: |
